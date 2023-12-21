@@ -91,7 +91,7 @@ footer {
 }
 
 /********************************************/
-  #nav {
+#nav {
   list-style: none inside;
   margin: 0;
   padding: 0;
@@ -121,7 +121,6 @@ footer {
 #nav li li a {
   font-size: 80%;
 }
-
 
 /* smaller font size for sub menu items */
 
@@ -170,7 +169,10 @@ a {
 
 /* Style for the image to align it to the right */
 .right-aligned-img {
-	float: right; /* Aligns the image to the right */
+	/*  float: right; Aligns the image to the right */
 	margin: 0 10px; /* Adds some space around the image */
 	vertical-align: top; /* Align top with the navigation menu */
+	position: fixed; 
+	top: 10px; 
+	right: 10px; 	
 }
