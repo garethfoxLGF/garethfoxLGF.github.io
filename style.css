@@ -15,6 +15,11 @@ header {
 
 .header-logo img {
     height: 60px; /* Adjust as per your logo's size */
+	margin: 0 10px; /* Adds some space around the image */
+	vertical-align: top; /* Align top with the navigation menu */
+	position: fixed; 
+	top: 10px; 
+	right: 10px; 	
 }
 
 .company-info {
