@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LGF Services Ltd</title>
-    <link rel="stylesheet" href="style.css?v2">
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="stylesheet" href="style.css?v4">
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
+    <style>
+
+        /* Style for the contact form */
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .form-field {
+            margin-bottom: 10px;
+        }
+
+        .form-field label {
+            display: block;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            width: 90%;
+            padding: 8px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #102c43;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #3693bd;
+        }
+    </style>
 
 </head>
 <body>
@@ -30,12 +64,65 @@
     </header>
 
     <section class="company-info">
-        <div class="company-logo">
-            <img src="LGFServicesLogoWhiteBGSmall.png" alt="Company Logo">
-        </div>
-        <p>Contact</p>
-        <!-- Additional company information goes here -->
-		<p>More information coming soon!</p>
+
+
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-field">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' >Send Email</button>
+        </form>
+    </div>
+
+    <script>
+	    //TODO Hide email address and use azure function
+	    var enquiries="e";
+		enquiries+= "n";
+		enquiries+= "q";
+		enquiries+= "u";
+		enquiries+= "i"
+		enquiries+= "r"
+		enquiries+= "i"
+		enquiries+= "e"
+		enquiries+= "s";
+		enquiries+= "@";
+		enquiries+= "lgf";
+		enquiries+= "services";
+		enquiries+= ".co.uk";
+        // JavaScript to handle the form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the actual form submission
+
+            // Gather the form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Construct the mailto link
+            var mailtoLink = 'mailto:' + enquiries + '?subject=Message from ' + encodeURIComponent(name) + '&body=' + encodeURIComponent(message) + '%0D%0A%0D%0AFrom: ' + encodeURIComponent(name) + '%0D%0AEmail: ' + encodeURIComponent(email);
+
+            // Open the mailto link in a new window/tab
+            window.open(mailtoLink, '_blank');
+			//TODO: Change to use an Azure function
+			this.innerHTML='Thanks for getting in contact.<br>We will get back to you as soon as we can.';
+        });
+    </script>
+
+
+        
     </section>
 
     <!-- Other sections of your webpage -->
@@ -43,7 +130,11 @@
     <footer>
         <p>Copyright &copy; LGF Services Ltd</p>
     </footer>
-    <script src="navigation.js"></script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("contactForm").submit();
+   }
+ </script>	
 
 </body>
 </html>
