@@ -71,6 +71,7 @@
     <div class="contact-form">
         <h2>Contact Us</h2>
         <form id="contactForm">
+			<!--
             <div class="form-field">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -83,7 +84,8 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
-            <button type="submit" class="submit-btn" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' >Send Email</button>
+			-->
+            <button type="submit" class="submit-btn" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' >Email Us</button>
         </form>
     </div>
 
@@ -107,12 +109,13 @@
             event.preventDefault(); // Prevent the actual form submission
 
             // Gather the form data
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
+            //var name = document.getElementById('name').value;
+            //var email = document.getElementById('email').value;
+            //var message = document.getElementById('message').value;
 
             // Construct the mailto link
-            var mailtoLink = 'mailto:' + enquiries + '?subject=Message from ' + encodeURIComponent(name) + '&body=' + encodeURIComponent(message) + '%0D%0A%0D%0AFrom: ' + encodeURIComponent(name) + '%0D%0AEmail: ' + encodeURIComponent(email);
+            //var mailtoLink = 'mailto:' + enquiries + '?subject=Message from ' + encodeURIComponent(name) + '&body=' + encodeURIComponent(message) + '%0D%0A%0D%0AFrom: ' + encodeURIComponent(name) + '%0D%0AEmail: ' + encodeURIComponent(email);
+			var mailtoLink = 'mailto:' + enquiries;
 
             // Open the mailto link in a new window/tab
             window.open(mailtoLink, '_blank');
