@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LGF Services Ltd</title>
 	<script src="https://www.google.com/recaptcha/api.js"></script>
-    <link rel="stylesheet" href="style.css?v4">
+    <link rel="stylesheet" href="style.css?v5">
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -62,32 +62,39 @@
             <img src="LGFServicesLogoBigBlueBGNoName114x106.png" alt="Header Logo" class="right-aligned-img">
         </div>
     </header>
-
-    <section class="company-info">
-
-
-
-    <!-- Contact Form -->
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-			<!--
-            <div class="form-field">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+    <content>
+        <section class="company-info">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <!--
+                    <div class="form-field">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    -->
+                    <button type="submit" class="submit-btn" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' >Email Us</button>
+                </form>
             </div>
-            <div class="form-field">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-field">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-			-->
-            <button type="submit" class="submit-btn" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' >Email Us</button>
-        </form>
-    </div>
+            
+        </section>
+    </content>
+
+    <!-- Other sections of your webpage -->
+
+    <footer>
+        <p>Copyright &copy; LGF Services Ltd</p>
+    </footer>
+
 
     <script>
 	    //TODO Hide email address and use azure function
@@ -125,15 +132,7 @@
     </script>
 
 
-        
-    </section>
-
-    <!-- Other sections of your webpage -->
-
-    <footer>
-        <p>Copyright &copy; LGF Services Ltd</p>
-    </footer>
- <script>
+<script>
    function onSubmit(token) {
      document.getElementById("contactForm").submit();
    }
