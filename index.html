@@ -3,48 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LGF Services Ltd</title>
-    <link rel="stylesheet" href="style.css?v5">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
+    <title>LGF Services Ltd - Business Central & Gymnastics Administration</title>
+    <meta name="description" content="Professional Business Central development and Gymnastics administration services in the UK.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest.json">
 </head>
 <body>
     <header>
         <div class="header-logo">
-			<ul id="nav">
-			  <li><a href="index.html">Home</a></li>
-			  <li><a href="#">Services</a>
-				<ul>
-				  <li class="top10"><a href="bc.html">Business Central</a></li>
-				  <li class="top10"><a href="admin.html">Gymnastic Administration</a></li>
-				</ul>
-				</li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
+            <ul id="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li class="top10"><a href="bc.html">Business Central</a></li>
+                        <li class="top10"><a href="admin.html">Gymnastic Administration</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
             <img src="LGFServicesLogoBigBlueBGNoName114x106.png" alt="Header Logo">
         </div>
     </header>
-	<content>
+
+    <main>
         <section class="company-info">
             <div class="company-logo">
                 <img src="LGFServicesLogoWhiteBGSmall.png" alt="Company Logo">
             </div>
-            <p class="heading">Welcome to LGF Services Ltd</p>
-            <!-- Additional company information goes here -->
-            <p><a href="bc.html">Business Central Development<a></p>
-            <p><a href="admin.html">Gymnastics Administration<a></p>
+            <h1 class="heading">Welcome to LGF Services Ltd</h1>
+            <p>We provide expert Business Central development and Gymnastics administration services across the UK.</p>
+            <p style="margin-top: 30px;">
+                <a href="bc.html" style="display: inline-block; margin: 10px; padding: 10px 20px; background: #3693bd; color: white; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.background='#102c43'" onmouseout="this.style.background='#3693bd'">Business Central Development</a>
+                <a href="admin.html" style="display: inline-block; margin: 10px; padding: 10px 20px; background: #3693bd; color: white; border-radius: 4px; transition: all 0.3s ease;" onmouseover="this.style.background='#102c43'" onmouseout="this.style.background='#3693bd'">Gymnastics Administration</a>
+            </p>
         </section>
-        <!-- Other sections of your webpage -->
-        <!-- Clear floats -->
-        <div class="clear"></div>
-    </content>
+    </main>
 
     <footer>
-        <p>Copyright &copy; LGF Services Ltd</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <span>•</span>
+                <a href="about.html">About</a>
+                <span>•</span>
+                <a href="contact.html">Contact</a>
+                <span>•</span>
+                <a href="privacy.html">Privacy</a>
+                <span>•</span>
+                <a href="terms.html">Terms</a>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 LGF Services Ltd. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Cookie Consent Banner & Modal -->
+    <div id="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-message">
+                We use cookies to enhance your experience and comply with data protection laws. <a href="#" onclick="CookieConsent.showSettings(); return false;">View settings</a> or <a href="privacy.html">read our privacy policy</a>.
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" id="cookie-accept-all">Accept All</button>
+                <button class="cookie-btn cookie-btn-settings" id="cookie-settings">Preferences</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-modal">
+        <div class="modal-content">
+            <div class="modal-header">Cookie Settings</div>
+            <div class="modal-description">
+                We use cookies to improve your experience and to comply with UK and EU data protection laws (GDPR). You can choose which types of cookies you allow below.
+            </div>
+
+            <div class="cookie-category">
+                <div class="category-title">
+                    <strong>Essential Cookies</strong>
+                    <div class="toggle-switch active" style="cursor: not-allowed; opacity: 0.6;"></div>
+                </div>
+                <div class="category-description">
+                    Required for core website functionality and legal compliance. Always enabled and cannot be disabled.
+                </div>
+            </div>
+
+            <div class="cookie-category">
+                <div class="category-title">
+                    <strong>Analytics Cookies</strong>
+                    <div class="toggle-switch" id="toggle-analytics"></div>
+                </div>
+                <div class="category-description">
+                    Help us understand how you use the site to improve user experience. Data is anonymized.
+                </div>
+            </div>
+
+            <div class="cookie-category">
+                <div class="category-title">
+                    <strong>Marketing Cookies</strong>
+                    <div class="toggle-switch" id="toggle-marketing"></div>
+                </div>
+                <div class="category-description">
+                    Used to display relevant advertisements and measure campaign effectiveness.
+                </div>
+            </div>
+
+            <div class="cookie-category">
+                <div class="category-title">
+                    <strong>Preference Cookies</strong>
+                    <div class="toggle-switch" id="toggle-preferences"></div>
+                </div>
+                <div class="category-description">
+                    Remember your preferences to personalize your experience on future visits.
+                </div>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-reject" id="cookie-modal-close">Close</button>
+                <button class="modal-btn modal-btn-reject" id="cookie-reject-all">Reject All</button>
+                <button class="modal-btn modal-btn-save" id="cookie-save-preferences">Save Preferences</button>
+                <button class="modal-btn modal-btn-accept-all" onclick="CookieConsent.acceptAll()">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cookies.js"></script>
 </body>
 </html>
 
