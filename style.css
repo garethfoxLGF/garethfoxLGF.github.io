@@ -590,11 +590,6 @@ footer {
     .heading {
         font-size: 1.5em;
     }
-    
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
 
 /* ===== Utility Classes ===== */
